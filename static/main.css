@@ -1,0 +1,68 @@
+body {
+    font-family: 'Lato';
+}
+ul li {
+    list-style-type: none;
+}
+a {
+    color: black;
+}
+a:hover {
+    color: black !important;
+    background-color: yellow;
+}
+a.nav-link:hover {
+    color: inherit !important;
+    background-color: inherit;
+}
+.card > a:hover {
+    background-color: inherit;
+}
+.title:hover {
+    color: black;
+}
+a.nav-link {
+    text-align: center;
+    font-family: 'Shippori Mincho B1';
+}
+.dark-mode {
+    background-color: #252525;
+    color: white !important;
+}
+.active {
+    text-decoration: underline;
+}
+#darkModeButton {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+.vh-align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+::-moz-selection { /* Code for Firefox */
+    color: black;
+    background: yellow;
+}
+  
+::selection {
+    color: black;
+    background: yellow;
+}
+
+@media (min-width: 768px) {
+    .writing {
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+    .first-page-text {
+        width: 50%;
+    }
+    .kwes-form {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
