@@ -59,12 +59,20 @@ function updateDarkness() {
         updateButtonText("light");
         $("#darkModeButton").css("color", "white").css("background-color", "#6c757d");
         $(".card-body").addClass("dark-mode");
+	$(".form-control").css({
+		"background-color":	"#575757",
+		"color":		"white"
+	});
     } else {
         doc.classList.remove("dark-mode");
         $('a').css("color", "black");
         updateButtonText("dark");
         $("#darkModeButton").css("color", "black").css("background-color", "white");
         $(".card-body").removeClass("dark-mode");
+	$(".form-control").css({
+		"background-color":	"white",
+		"color":		"black"
+	});
     }
 }
 
@@ -76,6 +84,10 @@ function toggleDarkMode(cookie) {
         $('#darkModeButton').text("Dark mode");
         $("#darkModeButton").css("color", "black").css("background-color", "white");
         $(".card-body").removeClass("dark-mode");
+	$(".form-control").css({
+		"background-color":	"white",
+		"color":		"black"
+	});
         // Update cookie
         setDarkCookie(false);
     } else if (cookie == "dark=false") {
@@ -85,6 +97,10 @@ function toggleDarkMode(cookie) {
         $('#darkModeButton').text("Light mode");
         $("#darkModeButton").css("color", "white").css("background-color", "#6c757d");
         $(".card-body").addClass("dark-mode");
+	$(".form-control").css({
+		"background-color":	"#575757",
+		"color":		"white"
+	});
         // Update cookie
         setDarkCookie(true);
     } else {
