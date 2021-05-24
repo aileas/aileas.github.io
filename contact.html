@@ -36,20 +36,21 @@
         <div class="starter-template py-5 px-3">
             <h1 class="text-center" style="font-family: 'Shippori Mincho B1'">Contact</h1>
             <hr style="width: 200px;" class="mx-auto">
-            <form action="https://kwes.io/api/foreign/forms/woBuA6PYuT78abJPoGb3" class="kwes-form">
+            <div id="statusMessage" class="alert mx-auto text-center" style="display:none; max-width: 500px;"></div>
+            <form id="contactForm" class="mx-auto" style="width: 60%">
                 <div class="mb-3">
                   <label for="nameField" class="form-label">Name</label>
-                  <input type="text" class="form-control" name="name" id="nameField" aria-describedby="emailHelp" rules="required|max:100">
+                  <input type="text" class="form-control" name="name" id="nameField" required>
                 </div>
                 <div class="mb-3">
                   <label for="emailField" class="form-label">Email</label>
-                  <input type="text" class="form-control" name="email" id="emailField" rules="required|email">
+                  <input type="email" class="form-control" name="email" id="emailField" required>
                 </div>
                 <div class="mb-3">
                     <label for="messageField" class="form-label">Message</label>
-                    <textarea cols="50" rows="10" class="form-control" name="message" id="messageField" rules="required|max:5000"></textarea>
+                    <textarea cols="50" rows="10" class="form-control" name="message" id="messageField" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button id="submitContactForm" type="submit" class="btn btn-primary">Submit</button>
             </form>
             <button id="darkModeButton" onclick="toggleDarkMode(decodeURIComponent(document.cookie))" class="btn btn-secondary">Dark mode</button>
         </div>
@@ -60,6 +61,6 @@
 			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 			  crossorigin="anonymous"></script>
     <script src="static/js/darkmode.js"></script>
-    <script src="https://kwes.io/v2/kwes-script.js" defer></script>
+    <script src="static/js/form-handler.js"></script>
 </body>
 </html>
